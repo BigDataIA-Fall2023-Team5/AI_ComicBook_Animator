@@ -1,0 +1,147 @@
+[2023-12-08T00:00:50.684+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sandbox.segmentation manual__2023-12-08T00:00:41.289360+00:00 [queued]>
+[2023-12-08T00:00:50.691+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sandbox.segmentation manual__2023-12-08T00:00:41.289360+00:00 [queued]>
+[2023-12-08T00:00:50.692+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-08T00:00:50.703+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): segmentation> on 2023-12-08 00:00:41.289360+00:00
+[2023-12-08T00:00:50.714+0000] {standard_task_runner.py:57} INFO - Started process 312 to run task
+[2023-12-08T00:00:50.722+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'sandbox', 'segmentation', 'manual__2023-12-08T00:00:41.289360+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/sandbox.py', '--cfg-path', '/tmp/tmp_1p2od53']
+[2023-12-08T00:00:50.728+0000] {standard_task_runner.py:85} INFO - Job 60: Subtask segmentation
+[2023-12-08T00:00:50.790+0000] {task_command.py:416} INFO - Running <TaskInstance: sandbox.segmentation manual__2023-12-08T00:00:41.289360+00:00 [running]> on host 93a86e24e563
+[2023-12-08T00:00:50.901+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sandbox' AIRFLOW_CTX_TASK_ID='segmentation' AIRFLOW_CTX_EXECUTION_DATE='2023-12-08T00:00:41.289360+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-08T00:00:41.289360+00:00'
+[2023-12-08T00:00:52.053+0000] {logging_mixin.py:151} INFO - Story: A MIDSUMMER NIGHT'S DREAM
+[2023-12-08T00:00:52.055+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.057+0000] {logging_mixin.py:151} INFO - PLATES
+
+
+
+
+
+WILLIAM SHAKESPEARE
+
+
+TITANIA AND THE CLOWN
+
+
+FERDINAND AND MIRANDA
+
+
+PRINCE FLORIZEL AN
+[2023-12-08T00:00:52.058+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.059+0000] {logging_mixin.py:151} INFO - Story: THE TEMPEST
+[2023-12-08T00:00:52.060+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.061+0000] {logging_mixin.py:151} INFO - Prospero, the Duke of Milan, was a learned and studious man, who
+      lived among his books, leavi
+[2023-12-08T00:00:52.063+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.064+0000] {logging_mixin.py:151} INFO - Story: AS YOU LIKE IT
+[2023-12-08T00:00:52.066+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.068+0000] {logging_mixin.py:151} INFO - There was once a wicked Duke named Frederick, who took the dukedom
+      that should have belonged 
+[2023-12-08T00:00:52.069+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.071+0000] {logging_mixin.py:151} INFO - Story: THE WINTER'S TALE
+[2023-12-08T00:00:52.072+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.073+0000] {logging_mixin.py:151} INFO - Leontes was the King of Sicily, and his dearest friend was Polixenes, King
+      of Bohemia. They h
+[2023-12-08T00:00:52.074+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.075+0000] {logging_mixin.py:151} INFO - Story: KING LEAR
+[2023-12-08T00:00:52.078+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.079+0000] {logging_mixin.py:151} INFO - King Lear was old and tired. He was aweary of the business of his kingdom,
+      and wished only to
+[2023-12-08T00:00:52.081+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.082+0000] {logging_mixin.py:151} INFO - Story: TWELFTH NIGHT
+[2023-12-08T00:00:52.083+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.085+0000] {logging_mixin.py:151} INFO - Orsino, the Duke of Illyria, was deeply in love with a beautiful
+      Countess named Olivia. Yet w
+[2023-12-08T00:00:52.086+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.087+0000] {logging_mixin.py:151} INFO - Story: MUCH ADO ABOUT NOTHING
+[2023-12-08T00:00:52.088+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.089+0000] {logging_mixin.py:151} INFO - In Sicily is a town called Messina, which is the scene of a curious
+      storm in a teacup that ra
+[2023-12-08T00:00:52.091+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.092+0000] {logging_mixin.py:151} INFO - Story: ROMEO AND JULIET
+[2023-12-08T00:00:52.093+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.094+0000] {logging_mixin.py:151} INFO - Once upon a time there lived in Verona two great families named Montagu
+      and Capulet. They wer
+[2023-12-08T00:00:52.095+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.097+0000] {logging_mixin.py:151} INFO - Story: PERICLES
+[2023-12-08T00:00:52.098+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.100+0000] {logging_mixin.py:151} INFO - Pericles, the Prince of Tyre, was unfortunate enough to make an
+      enemy of Antiochus, the power
+[2023-12-08T00:00:52.102+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.103+0000] {logging_mixin.py:151} INFO - Story: HAMLET
+[2023-12-08T00:00:52.104+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.105+0000] {logging_mixin.py:151} INFO - Hamlet was the only son of the King of Denmark. He loved his father
+      and mother dearly--and wa
+[2023-12-08T00:00:52.107+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.108+0000] {logging_mixin.py:151} INFO - Story: CYMBELINE
+[2023-12-08T00:00:52.109+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.110+0000] {logging_mixin.py:151} INFO - Cymbeline was the King of Britain. He had three children. The two
+      sons were stolen away from 
+[2023-12-08T00:00:52.111+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.113+0000] {logging_mixin.py:151} INFO - Story: MACBETH
+[2023-12-08T00:00:52.114+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.115+0000] {logging_mixin.py:151} INFO - When a person is asked to tell the story of Macbeth, he can tell two
+      stories. One is of a man
+[2023-12-08T00:00:52.116+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.118+0000] {logging_mixin.py:151} INFO - Story: THE COMEDY OF ERRORS
+[2023-12-08T00:00:52.120+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.121+0000] {logging_mixin.py:151} INFO - AEGEON was a merchant of Syracuse, which is a seaport in Sicily. His
+      wife was AEmilia, and th
+[2023-12-08T00:00:52.122+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.123+0000] {logging_mixin.py:151} INFO - Story: THE MERCHANT OF VENICE
+[2023-12-08T00:00:52.125+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.126+0000] {logging_mixin.py:151} INFO - Antonio was a rich and prosperous merchant of Venice. His ships were
+      on nearly every sea, and
+[2023-12-08T00:00:52.127+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.128+0000] {logging_mixin.py:151} INFO - Story: TIMON OF ATHENS
+[2023-12-08T00:00:52.129+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.130+0000] {logging_mixin.py:151} INFO - Four hundred years before the birth of Christ, a man lived in Athens
+      whose generosity was not
+[2023-12-08T00:00:52.131+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.131+0000] {logging_mixin.py:151} INFO - Story: OTHELLO
+[2023-12-08T00:00:52.133+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.134+0000] {logging_mixin.py:151} INFO - Four hundred years ago there lived in Venice an ensign named Iago,
+      who hated his general, Oth
+[2023-12-08T00:00:52.135+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.135+0000] {logging_mixin.py:151} INFO - Story: THE TAMING OF THE SHREW
+[2023-12-08T00:00:52.136+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.137+0000] {logging_mixin.py:151} INFO - There lived in Padua a gentleman named Baptista, who had two fair
+      daughters. The eldest, Kath
+[2023-12-08T00:00:52.138+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.139+0000] {logging_mixin.py:151} INFO - Story: MEASURE FOR MEASURE
+[2023-12-08T00:00:52.139+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.140+0000] {logging_mixin.py:151} INFO - More centuries ago than I care to say, the people of Vienna were
+      governed too mildly. The rea
+[2023-12-08T00:00:52.141+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.142+0000] {logging_mixin.py:151} INFO - Story: TWO GENTLEMEN OF VERONA
+[2023-12-08T00:00:52.143+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.144+0000] {logging_mixin.py:151} INFO - Only one of them was really a gentleman, as you will discover later.
+      Their names were Valenti
+[2023-12-08T00:00:52.144+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.145+0000] {logging_mixin.py:151} INFO - Story: ALL'S WELL THAT ENDS WELL
+[2023-12-08T00:00:52.146+0000] {logging_mixin.py:151} INFO - Content:
+[2023-12-08T00:00:52.147+0000] {logging_mixin.py:151} INFO - In the year thirteen hundred and something, the Countess of
+      Rousillon was unhappy in her pala
+[2023-12-08T00:00:52.148+0000] {logging_mixin.py:151} INFO - 
+---
+[2023-12-08T00:00:52.167+0000] {python.py:194} INFO - Done. Returned value was: {'THE TEMPEST': [['Prospero, the Duke of Milan, was a learned and studious man, who\r\n      lived among his books, leaving the management of his dukedom to his\r\n      brother Antonio, in whom indeed he had complete trust.', "But that trust was\r\n      ill-rewarded, for Antonio wanted to wear the duke's crown himself, and, to\r\n      gain his ends, would have killed his brother but for the love the people\r\n      bore him.", "However, with the help of Prospero's great enemy, Alonso, King\r\n      of Naples, he managed to get into his hands the dukedom with all its\r\n      honor, power, and riches.", 'For they took Prospero to sea, and when they\r\n      were far away from land, forced him into a little boat with no tackle,\r\n      mast, or sail.', 'In their cruelty and hatred they put his little daughter,\r\n      Miranda (not yet three years old), into the boat with him, and sailed\r\n      away, leaving them to their fate.', 'But one among the courtiers with Antonio was true to his rightful master,\r\n      Prospero.', "To save the duke from his enemies was impossible, but much could\r\n      be done to remind him of a subject's love.", 'So this worthy lord, whose name\r\n      was Gonzalo, secretly placed in the boat some fresh water, provisions, and\r\n      clothes, and what Prospero valued most of all, some of his precious books.', 'The boat was cast on an island, and Prospero and his little one landed in\r\n      safety.', 'Now this island was enchanted, and for years had lain under the\r\n      spell of a fell witch, Sycorax, who had imprisoned in the trunks of trees\r\n      all the good spirits she found there.', 'She died shortly before Prospero was\r\n      cast on those shores, but the spirits, of whom Ariel was the chief, still\r\n      remained in their prisons.', 'Prospero was a great magician, for he had devoted himself almost entirely\r\n      to the study of magic during the years in which he allowed his brother to\r\n      manage the affairs of Milan.', 'By his art he set free the imprisoned\r\n      spirits, yet kept them obedient to his will, and they were more truly his\r\n      subjects than his people in Milan had been.', 'For he treated them kindly as\r\n      long as they did his bidding, and he exercised his power over them wisely\r\n      and well.', 'One creature alone he found it necessary to treat with\r\n      harshness: this was Caliban, the son of the wicked old witch, a hideous,\r\n      deformed monster, horrible to look on, and vicious and brutal in all his\r\n      habits.', "When Miranda was grown up into a maiden, sweet and fair to see, it chanced\r\n      that Antonio and Alonso, with Sebastian, his brother, and Ferdinand, his\r\n      son, were at sea together with old Gonzalo, and their ship came near\r\n      Prospero's island."], ['Prospero, knowing they were there, raised by his art a\r\n      great storm, so that even the sailors on board gave themselves up for\r\n      lost; and first among them all Prince Ferdinand leaped into the sea, and,\r\n      as his father thought in his grief, was drowned.', 'But Ariel brought him\r\n      safe ashore; and all the rest of the crew, although they were washed\r\n      overboard, were landed unhurt in different parts of the island, and the\r\n      good ship herself, which they all thought had been wrecked, lay at anchor\r\n      in the harbor whither Ariel had brought her.', 'Such wonders could Prospero\r\n      and his spirits perform.', 'While yet the tempest was raging, Prospero\r\n      showed his daughter the brave ship laboring in the trough of the sea, and\r\n      told her that it was filled with living human beings like themselves.', 'She,\r\n      in pity of their lives, prayed him who had raised this storm to quell it.', 'Then her father bade her to have no fear, for he intended to save every\r\n      one of them.', 'Then, for the first time, he told her the story of his life and hers, and\r\n      that he had caused this storm to rise in order that his enemies, Antonio\r\n      and Alonso, who were on board, might be delivered into his hands.', 'When he had made an end of his story he charmed her into sleep, for Ariel\r\n      was at hand, and he had work for him to do.', 'Ariel, who longed for his\r\n      complete freedom, grumbled to be kept in drudgery, but on being\r\n      threateningly reminded of all the sufferings he had undergone when Sycorax\r\n      ruled in the land, and of the debt of gratitude he owed to the master who\r\n      had made those sufferings to end, he ceased to complain, and promised\r\n      faithfully to do whatever Prospero might command.', '“Do so,” said Prospero, “and in two days I will discharge thee.”\r\n     \n\r\n      Then he bade Ariel take the form of a water nymph and sent him in search\r\n      of the young prince.', "And Ariel, invisible to Ferdinand, hovered near him,\r\n      singing the while--\r\n    \n\n\r\n        “Come unto these yellow sands\r\n      \n\r\n        And then take hands:\r\n      \n\r\n        Court'sied when you have, and kiss'd\r\n      \n\r\n        (The wild waves whist),\r\n      \n\r\n        Foot it featly here and there;\r\n      \n\r\n        And, sweet sprites, the burden bear!”\r\n       \n\n\r\n      And Ferdinand followed the magic singing, as the song changed to a solemn\r\n      air, and the words brought grief to his heart, and tears to his eyes, for\r\n      thus they ran--\r\n    \n\n\r\n        “Full fathom five thy father lies;\r\n      \n\r\n        Of his bones are coral made.", 'Those are pearls that were his eyes,\r\n      \n\r\n        Nothing of him that doth fade,\r\n      \n\r\n        But doth suffer a sea-change\r\n      \n\r\n        Into something rich and strange.', 'Sea-nymphs hourly ring his knell.', 'Hark!', 'now I hear them,-- ding dong bell!”\r\n       \n\n\r\n      And so singing, Ariel led the spell-bound prince into the presence of\r\n      Prospero and Miranda.', 'Then, behold!'], ['all happened as Prospero desired.', 'For\r\n      Miranda, who had never, since she could first remember, seen any human\r\n      being save her father, looked on the youthful prince with reverence in her\r\n      eyes, and love in her secret heart.', '“I might call him,” she said, “a thing divine, for nothing natural I ever\r\n      saw so noble!”\r\n     \n\r\n      And Ferdinand, beholding her beauty with wonder and delight, exclaimed--\r\n    \n\r\n      “Most sure the goddess on whom these airs attend!”\r\n     \n\r\n      Nor did he attempt to hide the passion which she inspired in him, for\r\n      scarcely had they exchanged half a dozen sentences, before he vowed to\r\n      make her his queen if she were willing.', 'But Prospero, though secretly\r\n      delighted, pretended wrath.', '“You come here as a spy,” he said to\r\n      Ferdinand.', '“I will manacle your neck and feet together, and you shall feed\r\n      on fresh water mussels, withered roots and husk, and have sea-water to\r\n      drink.', 'Follow.”\r\n     \n\r\n      “No,” said Ferdinand, and drew his sword.', 'But on the instant Prospero\r\n      charmed him so that he stood there like a statue, still as stone; and\r\n      Miranda in terror prayed her father to have mercy on her lover.', 'But he\r\n      harshly refused her, and made Ferdinand follow him to his cell.', 'There he\r\n      set the Prince to work, making him remove thousands of heavy logs of\r\n      timber and pile them up; and Ferdinand patiently obeyed, and thought his\r\n      toil all too well repaid by the sympathy of the sweet Miranda.', 'She in very pity would have helped him in his hard work, but he would not\r\n      let her, yet he could not keep from her the secret of his love, and she,\r\n      hearing it, rejoiced and promised to be his wife.', 'Then Prospero released him from his servitude, and glad at heart, he gave\r\n      his consent to their marriage.', "“Take her,” he said, “she is thine own.”\r\n     \n\r\n      In the meantime, Antonio and Sebastian in another part of the island were\r\n      plotting the murder of Alonso, the King of Naples, for Ferdinand being\r\n      dead, as they thought, Sebastian would succeed to the throne on Alonso's\r\n      death.", 'And they would have carried out their wicked purpose while their\r\n      victim was asleep, but that Ariel woke him in good time.', 'Many tricks did Ariel play them.', 'Once he set a banquet before them, and\r\n      just as they were going to fall to, he appeared to them amid thunder and\r\n      lightning in the form of a harpy, and immediately the banquet disappeared.'], ['Then Ariel upbraided them with their sins and vanished too.', 'Prospero by his enchantments drew them all to the grove without his cell,\r\n      where they waited, trembling and afraid, and now at last bitterly\r\n      repenting them of their sins.', "Prospero determined to make one last use of his magic power, “And then,”\r\n       said he, “I'll break my staff and deeper than did ever plummet sound I'll\r\n      drown my book.”\r\n     \n\r\n      So he made heavenly music to sound in the air, and appeared to them in his\r\n      proper shape as the Duke of Milan.", 'Because they repented, he forgave them\r\n      and told them the story of his life since they had cruelly committed him\r\n      and his baby daughter to the mercy of wind and waves.', 'Alonso, who seemed\r\n      sorriest of them all for his past crimes, lamented the loss of his heir.', 'But Prospero drew back a curtain and showed them Ferdinand and Miranda\r\n      playing at chess.', "Great was Alonso's joy to greet his loved son again, and\r\n      when he heard that the fair maid with whom Ferdinand was playing was\r\n      Prospero's daughter, and that the young folks had plighted their troth, he\r\n      said--\r\n    \n\n\n\n\n “Give me your hands, let grief and sorrow\r\n      still embrace his heart that doth not wish you joy.”\r\n     \n\r\n      So all ended happily.", 'The ship was safe in the harbor, and next day they\r\n      all set sail for Naples, where Ferdinand and Miranda were to be married.', 'Ariel gave them calm seas and auspicious gales; and many were the\r\n      rejoicings at the wedding.', 'Then Prospero, after many years of absence, went back to his own dukedom,\r\n      where he was welcomed with great joy by his faithful subjects.', 'He\r\n      practiced the arts of magic no more, but his life was happy, and not only\r\n      because he had found his own again, but chiefly because, when his\r\n      bitterest foes who had done him deadly wrong lay at his mercy, he took no\r\n      vengeance on them, but nobly forgave them.', "As for Ariel, Prospero made him free as air, so that he could wander where\r\n      he would, and sing with a light heart his sweet song--\r\n    \n\n\n\n\n\r\n        “Where the bee sucks, there suck I:\r\n      \n\r\n        In a cowslip's bell I lie;\r\n      \n\r\n        There I couch when owls do cry.", "On the bat's back I do fly\r\n      \n\r\n        After summer, merrily:\r\n      \n\r\n        Merrily, merrily, shall I live now,\r\n      \n\r\n        Under the blossom that hangs on the bough.”"]]}
+[2023-12-08T00:00:52.213+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=sandbox, task_id=segmentation, execution_date=20231208T000041, start_date=20231208T000050, end_date=20231208T000052
+[2023-12-08T00:00:52.279+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-08T00:00:52.315+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
