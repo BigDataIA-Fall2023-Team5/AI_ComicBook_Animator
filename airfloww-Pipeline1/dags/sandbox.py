@@ -12,6 +12,11 @@ import nltk
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 import math
+from dotenv import load_dotenv
+load_dotenv()
+from google.cloud import firestore
+
+
 
 
 
@@ -97,6 +102,14 @@ def data_scraping():
   return final_story
 
 
+def upload_to_firestore():
+    db = firestore.Client()
+    segmented_data = segmentation()  # Call your segmentation function
+
+    for play_name, segments in segmented_data.items():
+        doc_ref = db.collection('plays').document(play_name)
+        doc_ref.set({'segments': segments})
+
 
 def segmentation():
   parts_dict = {}
@@ -129,9 +142,15 @@ with dag:
         dag=dag,
     )
 
+    upload_to_firestore_task = PythonOperator(
+        task_id='upload_to_firestore',
+        python_callable=upload_to_firestore,
+        dag=dag,
+    )
+
     bye_world_task = BashOperator(
         task_id="bye_world",
         bash_command='echo "Bye from airflow"'
     )
 
-    data_scraping_task >> segmentation_task >> bye_world_task
+    data_scraping_task >> segmentation_task >> upload_to_firestore_task >> bye_world_task
