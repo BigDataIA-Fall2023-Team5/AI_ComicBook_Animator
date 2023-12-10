@@ -116,17 +116,19 @@ def segmentation():
   original_dict = data_scraping()
   for key, value in original_dict.items():
     sentences = sent_tokenize(value)
-
+ 
     # Determining the length of each part
     total_sentences = len(sentences)
     part_length = math.ceil(total_sentences / 4)
-
+ 
     # Dividing the sentences into four parts
     parts = [sentences[i:i + part_length] for i in range(0, total_sentences, part_length)]
+ 
     
-    
-    parts_dict[key] = parts
-
+    for i in range(0,3):
+        new_key = f'{key}-Part{i+1}'  
+        parts_dict[new_key] = parts[i]
+ 
     return parts_dict
 
 with dag:
