@@ -12,10 +12,13 @@ import nltk
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 import math
+from google.cloud import firestore
+
+
+
 
 user_input = {
     "epub_path": Param(default="/opt/airflow/dags/carroll-alice-in-wonderland-illustrations.epub", type='string', minLength=5, maxLength=255),
-    "chapter_title": Param(default="I Down the Rabbit-hole", type='string', minLength=5, maxLength=255),
 }
 
 
@@ -32,25 +35,7 @@ dag = DAG(
 def file_reader(**kwargs):
     epub_path = kwargs["params"]["epub_path"]
     book = epub.read_epub(epub_path)
-    index_headings = ['contents', 'chapters', 'index']  # Common index page headings
-    chapter_titles = []
 
-    for item in book.get_items():
-        if item.get_type() == ebooklib.ITEM_DOCUMENT:
-            soup = BeautifulSoup(item.content, 'html.parser')
-            # Check if this document is an index page
-            if any(heading in soup.text.lower() for heading in index_headings):
-                # Extract potential chapter titles
-                links = soup.find_all('a')
-                for link in links:
-                    chapter_title = link.get_text().strip()
-                    if chapter_title:
-                        chapter_titles.append(chapter_title)
-                break  # Assuming only one index page
-    print(chapter_titles)
-
-
-    chapter_title = kwargs["params"]["chapter_title"]
     chapters_content = {}
     # Iterate through each item in the EPUB file
     for item in book.get_items_of_type(ebooklib.ITEM_DOCUMENT):
@@ -65,25 +50,51 @@ def file_reader(**kwargs):
     # Now chapters_content has all chapters' text indexed by their title
     return chapters_content
 
-
-
 def segmentation(**kwargs):
-  parts_dict = {}
-  original_dict = file_reader(**kwargs)
-  for key, value in original_dict.items():
-    sentences = sent_tokenize(value)
+    parts_dict = {}
+    original_dict = file_reader(**kwargs)
 
-    # Determining the length of each part
-    total_sentences = len(sentences)
-    part_length = math.ceil(total_sentences / 4)
+    # Extracting book name from the epub_path
+    epub_path = kwargs["params"]["epub_path"]
+    book_name = os.path.splitext(os.path.basename(epub_path))[0].replace(' ', '_')
 
-    # Dividing the sentences into four parts
-    parts = [sentences[i:i + part_length] for i in range(0, total_sentences, part_length)]
-    
-    
-    parts_dict[key] = parts
+    book = epub.read_epub(epub_path)
+    index_headings = ['contents', 'chapters', 'index']  # Common index page headings
+    chapter_titles = []
+
+    for item in book.get_items():
+        if item.get_type() == ebooklib.ITEM_DOCUMENT:
+            soup = BeautifulSoup(item.content, 'html.parser')
+            if any(heading in soup.text.lower() for heading in index_headings):
+                links = soup.find_all('a')
+                for link in links:
+                    chapter_title = link.get_text().strip()
+                    if chapter_title:
+                        chapter_titles.append(chapter_title)
+                break
+
+    for key, value in original_dict.items():
+        if key in chapter_titles:
+            sentences = sent_tokenize(value)
+            total_sentences = len(sentences)
+            part_length = math.ceil(total_sentences / 4)
+
+            for i in range(4):
+                segment_key = f"{book_name}-{key}-{i+1}"
+                start_index = i * part_length
+                end_index = start_index + part_length
+                parts_dict[segment_key] = ' '.join(sentences[start_index:end_index])
 
     return parts_dict
+
+
+def upload_to_firestore(**kwargs):
+    db = firestore.Client()
+    segmented_data = segmentation(**kwargs)  # Call your segmentation function
+
+    for chapter_title, segments in segmented_data.items():
+        doc_ref = db.collection('alice_in_wonderland').document(chapter_title)
+        doc_ref.set({'segments': segments})
 
 with dag:
     file_reader_task = PythonOperator(
@@ -98,9 +109,15 @@ with dag:
         dag=dag,
     )
 
+    upload_to_firestore_task = PythonOperator(
+        task_id='upload_to_firestore',
+        python_callable=upload_to_firestore,
+        dag=dag,
+    )
+
     bye_world_task = BashOperator(
         task_id="bye_world",
         bash_command='echo "Bye from airflow"'
     )
 
-    file_reader_task >> segmentation_task >> bye_world_task
+    file_reader_task >> segmentation_task >> upload_to_firestore_task >> bye_world_task
