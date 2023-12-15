@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "flowing-perigee-407723",
+  "private_key_id": "d7fa72ef675f0143726ced0d19d8856071b1887e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCn9hEGuBQVw0xS\nt+LqDR4oSphFVqG2ilryTgcs9qFEG95UmBnNF85xWOzV3ou4+lwvxxWSBKnSC2im\nStEBSdaW2Uz6b/lPqOQcKXwaWp/tgEbwHCcCyvQBaR7SXy4s88Vv2dfiLbejBCjn\n247eVudyE6isEbhXOat5ieYuE7ZNQl64wz3UmIrq5XRoFx0+jumYKw/4b2Kn+qm4\nhQNmDKQPxga4QMFzbbrs22uez7QKlHIJzd5BQ/g7HUsx/bpAOoQxn1Cy5zaVjBuI\nSFU2eBWJUxZVbmllT4LQjnf0lrcfIP/9RxrRrsr488qgfA7dz8kyK1gVOfrq+izt\n3eYN2ZULAgMBAAECggEAEUmk9/2TZ6gJ34u4yeFexMPkx2JC09CKytzYJTsfXyzF\nJgzfvvnf0E/YVK0K0ZfHTE2f/T8Ioat18oPJ3mmUskMchrxmu1nFXNayRN4mDuKA\nqq8jHsj383s35mxQiuTuYfRYoZmWCKvhb/frzRvBx76ZQliykhvH+AMHE6AIyAvN\nPVru2FPhO9s7PXL+If47Z4+FCh/VU3oWJ4Rss+6msvoIOVL0XesiLov88DoGCUO7\nSPRO9y9qciW5SXeENEEBmpZzQz62LdZGCslwMQUrROQh3iC0hJm6wH6c8sVVXIGm\n1RCF7uToDgtg/nQO03jFu4wjkrGiIWhh9H5fot8SmQKBgQDrvWyWq5zPYdooAGUI\n4X0JnESXxOzEUZzrMM5zTfRYzQRYp5EkB18IyYBhGtf+/jVngqgY5RAloezkm/qe\n8XZHc5hrjvNPgCHRDbDKPpvKEn3+3DMEYR5y7fpXgkfzhDAmeJiQCb4IFMYbJk0n\nOq/TzNjQ8AFfS1IX1/yognM2SQKBgQC2ZWyx7agzF3n16EjWcli71+Mu1gWvWMKr\nqhgNHGOQtOezD6xrdtEKT5muHXZ5K1koJEzOi2sTHPMEYURzwwDQFZjrCNGPSBnR\n59D7m+j1opzlI+8Rs6sx18lf3g86jOrXLROupeeAzRZwWg433W7jre2N2aIoLKny\neohy1nWgswKBgQC8BmoGAvsfrbyDC02Kt88zSyCqrLbsHuw56sO/0/2AloVQ8NYj\nFn4GVDHBQdfl2nxeAyhwMsOeQHjiHkbXX2AnvVtk7q/CSUCvrWvE5Ar+MaGtFZTb\neVr/8DAsfA1Hfbep96Y3vI2FhIw+O15uW7DCDjEg9U0i5MClo/Axt1qNgQKBgGfu\no2E/6vgyCGz3T4ni3m0rN2kYy2R/T25CHjJaWuG6M8z0wWr66WLWuNteLoQdD1Cw\nXpPTHdBmTpPQWREdrPjlVZ2YCNF8ZDoXvh2hWb2eS4jGURPlLUfZjgXyovraEXdL\nWEvMfX4HXyHmLvPmWamjEhoiSSRbTvu8lsPZMG3BAoGAWOtsiVo+aXTxeElR62sZ\nlgnGfOowyWqIYgmC6AhzM/tL/6AKUK6D8RNM8wzJSdiC3iYqREXOXcNlgQsC+kQ9\nErRbsWMUc8wk92ru6ZabtQmshZW+ZDb61Uf3iakVCjUvviyqlg0ETnultNWACPo4\ne/JsJuA49cLemw1+JdL0IKM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "images-comics@flowing-perigee-407723.iam.gserviceaccount.com",
+  "client_id": "116177663023727237802",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/images-comics%40flowing-perigee-407723.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
