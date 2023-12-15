@@ -12,7 +12,7 @@ Overview
 Welcome to Shakespearify, an innovative project that combines the power of AI-driven storytelling and illustration to modernize Shakespeare's plays for today's audience. Our goal is to bridge the gap between classic literature and modern technology, reimagining Shakespeare's timeless stories for a digital-savvy audience while revitalizing interest in his works.
   <br>
     <br>
-The demo video:
+The demo video: https://drive.google.com/drive/folders/1iChOHqXDGNkagqMBW2yNeglPAgA79wfX?usp=share_link
    <br>
    <br>
 About Shakespearify  <br>
