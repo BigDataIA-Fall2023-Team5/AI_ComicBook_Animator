@@ -25,12 +25,12 @@ Technologies and Tools  <br>
 Architecture  <br>
 Proposed Architecture:
   <br>
-![proposedARCHITEC_project](https://github.com/BigDataIA-Fall2023-Team5/Assignment_2/assets/114001023/e753a3be-951a-4387-bafc-2b14aa86bbd7)
+![proposedARCHITEC_project](https://github.com/BigDataIA-Fall2023-Team5/Final_Project/blob/main/MicrosoftTeams-image%20(9).png)
 
   <br>
 Executed Architecture:
   <br>
- ![ARCHITEC_project](https://github.com/BigDataIA-Fall2023-Team5/Assignment_2/assets/114001023/e753a3be-951a-4387-bafc-2b14aa86bbd7)
+ ![ARCHITEC_project](https://github.com/BigDataIA-Fall2023-Team5/Final_Project/blob/main/MicrosoftTeams-image%20(10).png)
 
   <br>
 Frontend UI  <br>
