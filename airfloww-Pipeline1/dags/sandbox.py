@@ -102,6 +102,25 @@ def data_scraping():
   return final_story
 
 
+def segmentation():
+    parts_dict = {}
+    original_dict = data_scraping()
+    for key, value in original_dict.items():
+        sentences = sent_tokenize(value)
+        # Determining the length of each part
+        total_sentences = len(sentences)
+        part_length = math.ceil(total_sentences / 4)
+
+        # Dividing the sentences into four parts
+        parts = [sentences[i:i + part_length] for i in range(0, total_sentences, part_length)]
+        for i in range(0,4):
+            new_key = f'{key}-Part{i+1}' 
+            parts_dict[new_key] = parts[i]
+    
+    return parts_dict
+  
+  
+
 def upload_to_firestore():
     db = firestore.Client()
     segmented_data = segmentation()  # Call your segmentation function
@@ -109,27 +128,6 @@ def upload_to_firestore():
     for play_name, segments in segmented_data.items():
         doc_ref = db.collection('plays').document(play_name)
         doc_ref.set({'segments': segments})
-
-
-def segmentation():
-  parts_dict = {}
-  original_dict = data_scraping()
-  for key, value in original_dict.items():
-    sentences = sent_tokenize(value)
- 
-    # Determining the length of each part
-    total_sentences = len(sentences)
-    part_length = math.ceil(total_sentences / 4)
- 
-    # Dividing the sentences into four parts
-    parts = [sentences[i:i + part_length] for i in range(0, total_sentences, part_length)]
- 
-    
-    for i in range(0,3):
-        new_key = f'{key}-Part{i+1}'  
-        parts_dict[new_key] = parts[i]
- 
-    return parts_dict
 
 with dag:
     data_scraping_task = PythonOperator(

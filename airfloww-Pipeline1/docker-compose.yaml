@@ -79,7 +79,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
-    - /Users/anamikabharali/Downloads/Final_Project/airfloww-Pipeline1/alien-bricolage-407504-ca3c68d56251.json:/opt/airflow/gcp-service-account.json
+    - /Users/shruti/Desktop/Final_Project/airfloww-Pipeline1/flowing-perigee-407723-d7fa72ef675f.json:/opt/airflow/gcp-service-account.json
 
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
