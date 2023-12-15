@@ -18,7 +18,7 @@ from google.cloud import firestore
 
 
 user_input = {
-    "epub_path": Param(default="/opt/airflow/dags/carroll-alice-in-wonderland-illustrations.epub", type='string', minLength=5, maxLength=255),
+    "epub_path": Param(default="/opt/airflow/dags/pg64317.epub", type='string', minLength=5, maxLength=255),
 }
 
 
@@ -93,7 +93,7 @@ def upload_to_firestore(**kwargs):
     segmented_data = segmentation(**kwargs)  # Call your segmentation function
 
     for chapter_title, segments in segmented_data.items():
-        doc_ref = db.collection('alice_in_wonderland').document(chapter_title)
+        doc_ref = db.collection('collection').document(chapter_title)
         doc_ref.set({'segments': segments})
 
 with dag:
