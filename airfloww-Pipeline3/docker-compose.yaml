@@ -72,14 +72,18 @@ x-airflow-common:
     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
     # WARNING: Use _PIP_ADDITIONAL_REQUIREMENTS option ONLY for a quick checks
     # for other purpose (development, test and especially production usage) build/extend Airflow image.
-    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:- openai transformers requests pymongo[srv]}
-    OPENAI_KEY: ${OPENAI_KEY}
+    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:- openai transformers requests pymongo[srv] google-cloud-firestore boto3}
+    GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/gcp-service-account.json
+    OPENAI_API_KEY: ${OPENAI_API_KEY}
     SD_KEY: ${SD_KEY}
+    AWS_ACCESS_KEY_ID: ${ACCESS_KEY} 
+    AWS_SECRET_ACCESS_KEY: ${SECRET_KEY}
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+    - /Users/shruti/Desktop/Final_Project/airfloww-Pipeline3/flowing-perigee-407723-d7fa72ef675f.json:/opt/airflow/gcp-service-account.json
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
