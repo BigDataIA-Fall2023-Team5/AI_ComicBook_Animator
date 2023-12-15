@@ -2,7 +2,7 @@
 
 <br>
 
-The project video for demo and instructions: https://drive.google.com/drive/folders/1iChOHqXDGNkagqMBW2yNeglPAgA79wfX?usp=share_link
+The project codelabs instructions: https://codelabs-preview.appspot.com/?file_id=https://docs.google.com/document/d/11HC-1LpisJTqCnSOU2hKEpsWQpU3qmPzW1dlcs4RZ8o#0
 <br>
 
 Shakespearify - AI Animator
